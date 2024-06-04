@@ -39,7 +39,11 @@ class _PrimaryButtonState extends State<PrimaryButton> {
                 width: 1.0,
               )),
           child: Center(
-            child: Text(widget.text),
+            child: widget.isLoading
+                ? const CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation(Colors.lightGreen),
+            )
+                : Text(widget.text),
           ),
         ),
       ),

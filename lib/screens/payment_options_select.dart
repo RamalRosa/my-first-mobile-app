@@ -60,7 +60,7 @@ class _SelectPaymentOptionsScreenState
           PrimaryButton(
             text: buttonText,
             backgroundColor: Colors.amber,
-            isLoading: false,
+            isLoading: isLoading,
             // onPressed: disableButton ? sayHello : null,
             onPressed: sayHello,
           )
