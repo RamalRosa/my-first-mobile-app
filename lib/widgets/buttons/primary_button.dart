@@ -7,7 +7,6 @@ class PrimaryButton extends StatefulWidget {
   final VoidCallback? onPressed;
   Icon? icon;
 
-
   PrimaryButton({
     super.key,
     required this.text,
@@ -25,7 +24,6 @@ class _PrimaryButtonState extends State<PrimaryButton> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-
       child: GestureDetector(
         onTap: widget.onPressed,
         child: Container(
@@ -41,8 +39,8 @@ class _PrimaryButtonState extends State<PrimaryButton> {
           child: Center(
             child: widget.isLoading
                 ? const CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation(Colors.lightGreen),
-            )
+                    valueColor: AlwaysStoppedAnimation(Colors.black),
+                  )
                 : Text(widget.text),
           ),
         ),

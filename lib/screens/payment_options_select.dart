@@ -23,7 +23,7 @@ class _SelectPaymentOptionsScreenState
   String buttonText = "Bank Transfer";
 
   //functions
-  Future<dynamic> sayHello() async {
+  Future<dynamic> getApiData() async {
     setState(() {
       isLoading = true;
       disableButton = true;
@@ -62,7 +62,7 @@ class _SelectPaymentOptionsScreenState
             backgroundColor: Colors.amber,
             isLoading: isLoading,
             // onPressed: disableButton ? sayHello : null,
-            onPressed: sayHello,
+            onPressed: getApiData,
           )
         ],
       ),
